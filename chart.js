@@ -9,7 +9,8 @@ zingchart.maps.loadGeoJSON({
     }
   },
   callback: function() { // Function called when GeoJSON is loaded
-    $.get('https://www.zingchart.com/resources/zingMap.json', function(data) {
+    //$.get('https://www.zingchart.com/resources/zingMap.json', function(data) {
+        $.get("countyData.json", function(data) {
       var items = data; //style JSON generated from geoJSON && countyAvgs
       zingchart.render({
         id: 'myChart',
@@ -65,7 +66,7 @@ zingchart.maps.loadGeoJSON({
               {
                 "legend-item" :{
                   "text":"51 - 60%"
-                },
+             },
                 "legend-marker": {
                   "background-color": "#f2f0f7",
                 }
