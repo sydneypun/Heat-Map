@@ -53,6 +53,40 @@ zingchart.maps.loadGeoJSON({
               } // Automatically scale to correct proportions
             }
           }],
+          "series": [ // for legend items
+            {
+              "legend-item" :{
+                "text":"1200 - 1300 headquarters"
+              },
+              "legend-marker": {
+                "background-color": "#014d08",
+              }
+            },
+            {
+              "legend-item" :{
+                "text":"10 - 20 headquarters"
+              },
+              "legend-marker": {
+                "background-color": "#539a46",
+              }
+            },
+            {
+              "legend-item" :{
+                "text":"1 - 9 headquarters"
+              },
+              "legend-marker": {
+                "background-color": "#86b679",
+              }
+            },
+            {
+              "legend-item" :{
+                "text":"0 headquarters"
+              },
+              "legend-marker": {
+                "background-color": "#b6d3ad",
+              }
+            },
+        ]
         }
       })
     });
