@@ -9,7 +9,6 @@ zingchart.maps.loadGeoJSON({
     }
   },
   callback: function() { // Function called when GeoJSON is loaded
-    //$.get('https://www.zingchart.com/resources/zingMap.json', function(data) {
         $.get("countyData.json", function(data) {
       var items = data; //style JSON generated from geoJSON && countyAvgs
       zingchart.render({
@@ -54,56 +53,6 @@ zingchart.maps.loadGeoJSON({
               } // Automatically scale to correct proportions
             }
           }],
-          "series": [ // for legend items
-              {
-                "legend-item" :{
-                  "text":"< = 50%"
-                },
-                "legend-marker": {
-                  "background-color": "#C9C9C9",
-                }
-              },
-              {
-                "legend-item" :{
-                  "text":"51 - 60%"
-             },
-                "legend-marker": {
-                  "background-color": "#f2f0f7",
-                }
-              },
-              {
-                "legend-item" :{
-                  "text":"61 - 70%"
-                },
-                "legend-marker": {
-                  "background-color": "#cbc9e2",
-                }
-              },
-              {
-                "legend-item" :{
-                  "text":"71 - 80%"
-                },
-                "legend-marker": {
-                  "background-color": "#9e9ac8",
-                }
-              },
-              {
-                "legend-item" :{
-                  "text":"81 - 90%"
-                },
-                "legend-marker": {
-                  "background-color": "#756bb1",
-                }
-              },
-              {
-                "legend-item" :{
-                  "text":"91 - 100%"
-                },
-                "legend-marker": {
-                  "background-color": "#54278f",
-                }
-              }
-          ]
         }
       })
     });
